@@ -103,6 +103,12 @@ body{
     z-index: -1;
     position: relative;
 }
+.content-item{
+    display: none;
+}
+.content-item.content-active{
+    display: inline-block;
+}
 .choose-color{
     padding: 45px 0 180px;
     text-align: center;
@@ -123,6 +129,9 @@ body{
     gap:40px;
     justify-content: center;
 
+}
+.choose__btn-active{
+    display: none;
 }
 .choose-color__btn{
     padding: 50px 55px;
@@ -145,7 +154,7 @@ body{
 }
 .composition__text{
     text-align: center;
-    width: 655px;
+    max-width: 655px;
     margin: 0 auto 40px;
 }
 .composition__inner{
@@ -262,15 +271,59 @@ body{
 }
 
 
-
-@media (max-width: 1200px) {
-
+@media (max-width: 1470px) {
     .choose-color__list{
         flex-wrap: wrap;
     }
 
+    .header__content-images img{
+        max-width: 100%;
+    }
+    .title{
+        font-size: 180px;
+        transform: translate(130px,30px);
+    }
+
 }
+@media (max-width: 1350px) {
+
+    .title{
+        transform: none;
+        font-size: 140px;
+        padding-top: 20vh;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    .title--pod{
+        z-index: 1;
+    }
+    .title--s{
+        transform: none;
+
+    }
+    .title--m{
+        transform: none;
+
+    }
+    .title--ax{
+        transform: none;
+    }
+
+}
+@media (max-width: 930px) {
+
+    .title{
+        position: relative;
+        font-size: 100px;
+        padding-top: 0;
+    }
+}
+
 @media (max-width: 768px) {
+    .title{
+        font-size: 58px;
+    }
     .choose-color__list{
         gap: 15px;
     }
@@ -318,6 +371,43 @@ body{
     }
     .case{
         padding: 40px 0;
+    }
+    .menu__list{
+        flex-wrap: wrap;
+        gap:10px 30px;
+    }
+    .menu__item{
+        margin-left: auto;
+
+    }
+    .header__top{
+        align-items: flex-start;
+    }
+    .menu__item-btn button{
+        width: 250px;
+    }
+    .menu__item-btn{
+        margin-left: auto;
+    }
+
+
+}
+@media (max-width: 420px) {
+    .title{
+        font-size: 50px;
+    }
+    .main__title{
+        font-size: 28px;
+    }
+
+    .choose-color__title{
+        font-size: 28px;
+    }
+    .energy__number{
+        font-size: 92px;
+    }
+    .case img{
+        width: 100%;
     }
 
 }
